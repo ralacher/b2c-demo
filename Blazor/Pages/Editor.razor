@@ -1,0 +1,14 @@
+﻿@page "/editor"
+@using Microsoft.AspNetCore.Authorization
+@inject IAuthorizationService AuthorizationService
+
+<h1>Editor Actions</h1>
+
+<AuthorizeView Policy="Editor">
+    <Authorized>
+        <p>You can only see this if you satisfy the "Editor" policy.</p>
+    </Authorized>
+    <NotAuthorized>
+        <p>Not authorized</p>
+    </NotAuthorized>
+</AuthorizeView>

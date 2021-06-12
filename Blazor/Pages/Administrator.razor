@@ -1,0 +1,12 @@
+﻿@page "/administrator"
+
+<h1>Administrator Actions</h1>
+
+<AuthorizeView Policy="Administrator">
+    <Authorized>
+        <p>You can only see this if you satisfy the "Administrator" policy.</p>
+    </Authorized>
+    <NotAuthorized>
+        <p>Not authorized</p>
+    </NotAuthorized>
+</AuthorizeView>
